@@ -1,0 +1,127 @@
+:root {
+  --primary: #6c4f3d;
+  --card-bg: #ffffff;
+  --card-hover: #f8f6f4;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #e8e6e3;
+  --card-bg: #1c1c1c;
+}
+
+/* Styles par défaut */
+body {
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ======================
+   MODE SOMBRE
+   ====================== */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Navbar sombre */
+.dark-mode .navbar {
+  background-color: #202124 !important;
+}
+.dark-mode .navbar .navbar-brand,
+.dark-mode .navbar .form-control,
+.dark-mode .navbar .form-select,
+.dark-mode .navbar button {
+  color: #f5f5f5 !important;
+}
+
+/* Cartes */
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  box-shadow: 0 6px 20px brown;
+}
+.dark-mode .card .btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+.dark-mode .card .btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+/* Formulaires */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #5a5959;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+  background-color: #524f4f;
+  border-color: #888;
+  color: #fff;
+}
+
+.dark-mode .modal-content{
+
+  background-color: #2c2c2c !important;
+  color: white !important;
+
+}
+
+/* placeholder en mode sombre */ 
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #bbb;  
+  opacity: 2;  
+}
+/* Boutons généraux */
+.dark-mode .btn {
+  border: none;
+}
+.dark-mode .btn-success {
+  background-color: #198754;
+}
+.dark-mode .btn-dark {
+  background-color: #444;
+}
+
+/* Toast */
+.dark-mode .toast {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.card-epice {
+  transition: transform .12s ease, box-shadow .12s ease;
+  border: none;
+  background: var(--card-bg);
+}
+.card-epice:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.card-epice img {
+  height: 200px;
+  object-fit: cover;
+}
+.icon-small { font-size: 0.9rem; }
+.toast-body { font-size: 0.95rem; }
+
+.navbar .form-control-sm, .navbar .form-select-sm {
+  min-width: 140px;
+}

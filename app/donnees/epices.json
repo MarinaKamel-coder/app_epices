@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "nom": "Paprika fumé",
+    "type": "Épice",
+    "origine": "Espagne",
+    "prix": "4.25",
+    "vendeur": "Casa del Sabor",
+    "stock": "40",
+    "image": "/images/epices/paprika-fume.avif",
+    "description": "Épice rouge douce et fumée, utilisée dans les paellas, ragoûts et marinades."
+  },
+  {
+    "id": 2,
+    "nom": "Fenugrec moulu",
+    "type": "Épice",
+    "origine": "Moyen-Orient",
+    "prix": 2.75,
+    "vendeur": "La Maison des Arômes",
+    "stock": 30,
+    "image": "/images/epices/fenugrec.webp",
+    "description": "Épice amère et noisettée, utilisée dans les currys, les mélanges d'épices et pour faire du pain."
+  },
+  {
+    "id": 3,
+    "nom": "Piment de Cayenne",
+    "type": "Épice",
+    "origine": "Guyane",
+    "prix": 3.5,
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": 20,
+    "image": "/images/epices/cayenne.webp",
+    "description": "Épice très piquante, utilisée pour relever les plats, les sauces et les marinades."
+  },
+  {
+    "id": 4,
+    "nom": "Clous de girofle moulus",
+    "type": "Épice",
+    "origine": "Madagascar",
+    "prix": 4.4,
+    "vendeur": "Au Poivre Sauvage",
+    "stock": 28,
+    "image": "/images/epices/clous_de_girofle.webp",
+    "description": "Épice piquante et chaude, utilisée dans les plats mijotés, les desserts et pour l'assaisonnement des viandes."
+  },
+  {
+    "id": 5,
+    "nom": "Graines de fenouil",
+    "type": "Épice",
+    "origine": "France",
+    "prix": 3,
+    "vendeur": "Épices Traditionnelles",
+    "stock": 40,
+    "image": "/images/epices/fenouil.webp",
+    "description": "Épice anisée et douce, utilisée dans les plats de poisson, les sauces et les saucisses."
+  },
+  {
+    "id": 6,
+    "nom": "Graines de moutarde",
+    "type": "Épice",
+    "origine": "Canada",
+    "prix": 2.9,
+    "vendeur": "Épices du Monde",
+    "stock": 35,
+    "image": "/images/epices/moutarde.webp",
+    "description": "Épice piquante et rustique, utilisée dans la préparation de condiments et pour assaisonner les plats."
+  },
+  {
+    "id": 7,
+    "nom": "Piment doux",
+    "type": "Épice",
+    "origine": "Espagne",
+    "prix": 3.25,
+    "vendeur": "La Maison des Arômes",
+    "stock": 42,
+    "image": "/images/epices/piment_doux.webp",
+    "description": "Épice légèrement piquante et sucrée, utilisée dans les plats mijotés et les sauces."
+  },
+  {
+    "id": 8,
+    "nom": "Anis étoilé",
+    "type": "Épice",
+    "origine": "Chine",
+    "prix": 5.5,
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": 25,
+    "image": "/images/epices/anis_etoile.webp",
+    "description": "Épice douce avec un goût rappelant la réglisse, utilisée dans les plats sucrés et salés, et pour aromatiser les boissons."
+  },
+  {
+    "id": 9,
+    "nom": "Grains de paradis",
+    "type": "Épice",
+    "origine": "Afrique de l’Ouest",
+    "prix": "6.2",
+    "vendeur": "Au Poivre Sauvage",
+    "stock": "15",
+    "image": "/images/epices/grains_de_paradis.webp",
+    "description": "Épice africaine au goût poivré et légèrement citronné, utilisée dans les plats mijotés et les marinades."
+  },
+  {
+    "id": 10,
+    "nom": "Sumac",
+    "type": "Épice",
+    "origine": "Moyen-Orient",
+    "prix": 3.8,
+    "vendeur": "Épices Traditionnelles",
+    "stock": 22,
+    "image": "/images/epices/sumac.webp",
+    "description": "Épice acide et fruitée, utilisée dans la cuisine moyen-orientale, pour assaisonner les salades, les viandes et les poissons."
+  },
+  {
+    "id": 11,
+    "nom": "Ras el hanout",
+    "type": "Épice",
+    "origine": "Maroc",
+    "prix": 4.5,
+    "vendeur": "Épices du Monde",
+    "stock": 18,
+    "image": "/images/epices/ras_el_hanout.webp",
+    "description": "Mélange d'épices nord-africain, utilisé dans les tajines, les soupes et les plats de riz."
+  },
+  {
+    "id": 12,
+    "nom": "Herbes de Provence",
+    "type": "Mélange d'épices",
+    "origine": "France",
+    "prix": 3.35,
+    "vendeur": "La Maison des Arômes",
+    "stock": 50,
+    "image": "/images/epices/herbes_de_provence.webp",
+    "description": "Mélange d'herbes aromatiques typique de la cuisine française, utilisé pour les grillades, les ragoûts et les légumes."
+  },
+  {
+    "id": 13,
+    "nom": "Poudre de chili",
+    "type": "Mélange d'épices",
+    "origine": "Mexique",
+    "prix": 3.6,
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": 28,
+    "image": "/images/epices/poudre_de_chili.webp",
+    "description": "Mélange d'épices piquant, utilisé dans la préparation du chili con carne et d'autres plats tex-mex."
+  },
+  {
+    "id": 14,
+    "nom": "Curry en poudre",
+    "type": "Mélange d'épices",
+    "origine": "Inde",
+    "prix": 3.95,
+    "vendeur": "Au Poivre Sauvage",
+    "stock": 32,
+    "image": "/images/epices/curry.webp",
+    "description": "Mélange d'épices indien, utilisé dans les currys, les soupes et comme assaisonnement."
+  },
+  {
+    "id": 15,
+    "nom": "Cinq-épices chinois",
+    "type": "Mélange d'épices",
+    "origine": "Chine",
+    "prix": 4.1,
+    "vendeur": "Épices Traditionnelles",
+    "stock": 26,
+    "image": "/images/epices/cinq_epices.webp",
+    "description": "Mélange d'épices utilisé dans la cuisine chinoise, idéal pour mariner les viandes et parfumer les plats mijotés."
+  },
+  {
+    "id": 16,
+    "nom": "Garam masala",
+    "type": "Mélange d'épices",
+    "origine": "Inde",
+    "prix": 4.25,
+    "vendeur": "Épices du Monde",
+    "stock": 20,
+    "image": "/images/epices/garam_masala.webp",
+    "description": "Mélange d'épices chauffant, utilisé dans les plats indiens pour ajouter de la profondeur et de la chaleur."
+  },
+  {
+    "id": 17,
+    "nom": "Thym séché",
+    "type": "Herbe",
+    "origine": "France",
+    "prix": 2.65,
+    "vendeur": "La Maison des Arômes",
+    "stock": 38,
+    "image": "/images/epices/thym.webp",
+    "description": "Herbe aromatique, utilisée dans les ragoûts, les bouillons et pour assaisonner les légumes."
+  },
+  {
+    "id": 18,
+    "nom": "Romarin séché",
+    "type": "Herbe",
+    "origine": "Méditerranée",
+    "prix": "2.75",
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": "50",
+    "image": "/images/epices/romarin.webp",
+    "description": "Herbe boisée et parfumée, utilisée dans les plats de viande, les soupes et les pommes de terre."
+  },
+  {
+    "id": 19,
+    "nom": "Basilic séché",
+    "type": "Herbe",
+    "origine": "Italie",
+    "prix": "2.85",
+    "vendeur": "Au Poivre Sauvage",
+    "stock": "43",
+    "image": "/images/epices/basilic.webp",
+    "description": "Herbe douce et légèrement poivrée, utilisée dans les sauces, les salades et les plats de pâtes."
+  },
+  {
+    "id": 20,
+    "nom": "Origan séché",
+    "type": "Herbe",
+    "origine": "Grèce",
+    "prix": 2.5,
+    "vendeur": "Épices Traditionnelles",
+    "stock": 45,
+    "image": "/images/epices/origan.webp",
+    "description": "Herbe aromatique avec un goût piquant, utilisée dans la cuisine italienne, grecque et mexicaine."
+  }
+]

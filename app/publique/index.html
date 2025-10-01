@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue d'Épices</title>
+  <link href="utilitaires/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm sticky-top">
+    <a class="navbar-brand fw-bold d-flex align-items-center ms-3" href="#">
+      <img src="images/epices/logo.jpeg" alt="Logo" width="50" class="me-2 rounded-circle">
+      <span class="fs-7">Épices du Monde</span>
+    </a>
+    <div class="ms-auto d-flex">
+      <input id="recherche" type="text" class="form-control me-2" placeholder="🔍 Rechercher...">
+
+
+      <select id="filtre" class="form-select me-2">
+        <option value="">🌍 Filtrer...</option>
+
+        <optgroup label="Origine">
+          <option value="all-origines">Toutes origines</option>
+          <option value="Inde">Inde</option>
+          <option value="Espagne">Espagne</option>
+          <option value="Maroc">Maroc</option>
+        </optgroup>
+
+        <optgroup label="Type">
+          <option value="all-types">Tous types</option>
+          <option value="Épice">Épice</option>
+          <option value="Herbe">Herbe</option>
+        </optgroup>
+
+        <optgroup label="Stock">
+          <option value="dispo">✅ En stock</option>
+          <option value="rupture">❌ Rupture</option>
+        </optgroup>
+      </select>
+
+
+      <select id="tri" class="form-select me-2">
+        <option value="nom-asc">Nom (A-Z)</option>
+        <option value="nom-desc">Nom (Z-A)</option>
+        <option value="prix-asc">Prix (bas → haut)</option>
+        <option value="prix-desc">Prix (haut → bas)</option>
+        <option value="stock-asc">Stock (faible → fort)</option>
+        <option value="stock-desc">Stock (fort → faible)</option>
+      </select>
+
+      <button class="btn btn-success me-2" id="btnAjouter">Ajouter</button>
+      <button class="btn btn-dark ms-2 me-3" id="btnMode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Contenu -->
+  <div class="container my-4">
+      <h1 class="mb-4 text-center fw-bold">🌶️ Notre Sélection d'Épices</h1>
+    <div id="listeEpices" class="row g-4"></div>
+  </div>
+
+  <!-- Modal Ajouter/Modifier -->
+  <div class="modal fade" id="modalEpice" tabindex="-1">
+    <div class="modal-dialog">
+      <form class="modal-content" id="formEpice" enctype="multipart/form-data">
+        <div class="modal-header">
+          <h5 class="modal-title">Nouvelle Épice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="epiceId">
+          <input type="text" id="nom" class="form-control mb-2" placeholder="Nom" required>
+          <input type="text" id="type" class="form-control mb-2" placeholder="Type" required>
+          <input type="text" id="origine" class="form-control mb-2" placeholder="Origine" required>
+          <input type="number" id="prix" class="form-control mb-2" placeholder="Prix" step="0.01" required>
+          <input type="text" id="vendeur" class="form-control mb-2" placeholder="Vendeur" required>
+          <input type="number" id="stock" class="form-control mb-2" placeholder="Stock" required>
+          <textarea id="description" class="form-control mb-2" placeholder="Description"></textarea>
+          <input type="file" id="image" name="image" class="form-control mb-2">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="position-fixed bottom-0 end-0 p-3">
+    <div id="toast" class="toast bg-success text-white" role="alert"></div>
+  </div>
+
+  <script src="utilitaires/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/global.js"></script>
+</body>
+</html>

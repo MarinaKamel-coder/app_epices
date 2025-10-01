@@ -1,0 +1,16 @@
+{
+  "name": "tp3_app_epices",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node serveur.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
