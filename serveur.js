@@ -11,9 +11,16 @@ const __dossier = path.dirname(__fichier);
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dossier, "app/publique")));
 
-// multer storage
+// ----------------------
+// Fichiers statiques
+// ----------------------
+app.use(express.static(path.join(__dossier, "app/publique")));
+app.use("/images/epices", express.static(path.join(__dossier, "app/publique/images/epices")));
+
+// ----------------------
+// Multer pour upload images
+// ----------------------
 const stockage = multer.diskStorage({
   destination: (req, file, cb) =>
     cb(null, path.join(__dossier, "app/publique/images/epices")),
@@ -21,7 +28,9 @@ const stockage = multer.diskStorage({
 });
 const upload = multer({ storage: stockage });
 
-// GET all
+// ----------------------
+// Routes API
+// ----------------------
 app.get("/epices", async (req, res) => {
   try {
     const data = await services.getAll();
@@ -31,12 +40,10 @@ app.get("/epices", async (req, res) => {
   }
 });
 
-// POST create (supports file upload or imageUrl)
 app.post("/epices", upload.single("image"), async (req, res) => {
   try {
     const body = { ...req.body };
     if (req.file) body.image = "/images/epices/" + req.file.filename;
-    // if imageUrl sent, services.create will handle it via body.imageUrl
     const created = await services.create(body);
     res.json({ statut: true, msg: "Épice ajoutée avec succès.", donnees: created });
   } catch (err) {
@@ -44,7 +51,6 @@ app.post("/epices", upload.single("image"), async (req, res) => {
   }
 });
 
-// PUT update (supports file upload or imageUrl)
 app.put("/epices/:id", upload.single("image"), async (req, res) => {
   try {
     const body = { ...req.body };
@@ -56,7 +62,6 @@ app.put("/epices/:id", upload.single("image"), async (req, res) => {
   }
 });
 
-// DELETE
 app.delete("/epices/:id", async (req, res) => {
   try {
     const removed = await services.remove(req.params.id);
@@ -66,16 +71,22 @@ app.delete("/epices/:id", async (req, res) => {
   }
 });
 
-// 404
-app.use((req, res) => {
-  res.status(404).json({ statut: false, msg: "Route introuvable", donnees: [] });
+// ----------------------
+// SPA support : rediriger tout ce qui n'est pas /epices vers index.html
+// ----------------------
+app.get("*", (req, res) => {
+  // Ignore les routes API
+  if (req.path.startsWith("/epices")) return res.status(404).json({ statut: false, msg: "Route introuvable", donnees: [] });
+  res.sendFile(path.join(__dossier, "app/publique/index.html"));
 });
 
-// error handler
+// ----------------------
+// Gestion des erreurs
+// ----------------------
 app.use((err, req, res, next) => {
   console.error("Serveur erreur:", err);
   res.status(500).json({ statut: false, msg: "Erreur serveur", donnees: [] });
 });
 
-
-app.listen(PORT, () => console.log("🚀 Serveur démarré sur le port ${PORT}"));
+// ----------------------
+app.listen(PORT, () => console.log(`🚀 Serveur démarré sur le port ${PORT}`));
