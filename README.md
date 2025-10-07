@@ -1,42 +1,50 @@
-# 🌶️ App Épices
+🌶️ App Épices
 
 Une application web pour gérer un catalogue d'épices.  
-Le projet utilise **Node.js** pour le backend et une interface web pour le frontend.
+Le projet utilise Node.js pour le backend et une interface web pour le frontend.
 
 ---
 
-## ⚙️ Fonctionnalités
+⚙️ Fonctionnalités
 
-- Afficher la liste des épices
-- Ajouter, modifier et supprimer des épices
-- Recherche et filtrage dans le catalogue
+- Afficher la liste des épices  
+- Ajouter, modifier et supprimer des épices  
+- Recherche et filtrage dans le catalogue  
 
 ---
 
-## 🛠️ Technologies utilisées
+🛠️ Technologies utilisées
 
 - Node.js  
 - Express  
 - HTML, CSS, JavaScript  
-- Bootstrap (optionnel pour le style)
+- Bootstrap (optionnel pour le style)  
 
 ---
-## 🚀 Installation et exécution
-1. cloner le dépôt:
+
+🚀 Installation et exécution
+
+1. Cloner le dépôt :
+
 ```bash
 git clone https://github.com/MarinaKamel-coder/app_epices.git
+cd app_epices
+Installer les dépendances :
 
-2. Installer les dépendances :
-```bash
+bash
+Copier le code
 npm install
+Lancer le serveur :
 
-3. Lancer le serveur :
-```bash
+bash
+Copier le code
 node serveur.js
+Ouvrir le navigateur et accéder à :
 
-4. Ouvrir le navigateur et accéder à :
+arduino
+Copier le code
 http://localhost:3000
----
+
 
 ## 🚀 Déploiement
 
