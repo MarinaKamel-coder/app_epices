@@ -21,13 +21,10 @@ Le projet utilise **Node.js** pour le backend et une interface web pour le front
 - Bootstrap (optionnel pour le style)
 
 ---
-
 ## 🚀 Installation et exécution
-
-1. Cloner le dépôt :
+1. cloner le dépôt:
 ```bash
 git clone https://github.com/MarinaKamel-coder/app_epices.git
-cd app_epices
 
 2. Installer les dépendances :
 ```bash
@@ -40,10 +37,11 @@ node serveur.js
 4. Ouvrir le navigateur et accéder à :
 http://localhost:3000
 ---
-# 🚀 Déploiement
+
+## 🚀 Déploiement
 
 Le site est déployé en ligne via GitHub Pages. Vous pouvez y accéder à l'adresse suivante :
 
 🌐 Site web : [https://app-epices.onrender.com/]
 
-
+---
