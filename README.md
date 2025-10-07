@@ -39,3 +39,9 @@ node serveur.js
 
 4. Ouvrir le navigateur et accéder à :
 http://localhost:3000
+
+## 🚀 Déploiement
+
+Le site est déployé en ligne via GitHub Pages. Vous pouvez y accéder à l'adresse suivante :
+
+[https://app-epices.onrender.com/]
