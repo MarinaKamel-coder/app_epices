@@ -30,9 +30,11 @@ git clone https://github.com/MarinaKamel-coder/app_epices.git
 cd app_epices
 
 2. Installer les dépendances :
+```bash
 npm install
 
 3. Lancer le serveur :
+```bash
 node serveur.js
 
 4. Ouvrir le navigateur et accéder à :
