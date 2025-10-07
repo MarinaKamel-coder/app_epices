@@ -22,13 +22,13 @@
     "description": "Épice amère et noisettée, utilisée dans les currys, les mélanges d'épices et pour faire du pain."
   },
   {
-    "id": 3,
+    "id": "3",
     "nom": "Piment de Cayenne",
     "type": "Épice",
     "origine": "Guyane",
-    "prix": 3.5,
+    "prix": "3.5",
     "vendeur": "Les Saveurs Exotiques",
-    "stock": 20,
+    "stock": "22",
     "image": "/images/epices/cayenne.webp",
     "description": "Épice très piquante, utilisée pour relever les plats, les sauces et les marinades."
   },
