@@ -133,9 +133,21 @@ formEpice.onsubmit = async (evt) => {
   });
 
   // fichier image
+  const imageUrl = document.getElementById("imageUrl").value.trim();
+
+  // --- Priorité : fichier local > URL distante ---
   if (fileInput && fileInput.files.length > 0) {
     formData.append("image", fileInput.files[0]);
+  } else if (imageUrl) {
+    // Vérifie que l'URL est valide
+    if (!/^https?:\/\//i.test(imageUrl)) {
+      toastEl.textContent = "URL d'image invalide. Utilise http:// ou https://";
+      toast.show();
+      return;
+    }
+    formData.append("imageUrl", imageUrl);
   }
+
 
   try {
     let res;
@@ -297,3 +309,4 @@ btnMode.onclick = () => {
   }
   localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
 };
+

@@ -84,7 +84,12 @@
           <input type="text" id="vendeur" class="form-control mb-2" placeholder="Vendeur" required>
           <input type="number" id="stock" class="form-control mb-2" placeholder="Stock" required>
           <textarea id="description" class="form-control mb-2" placeholder="Description"></textarea>
-          <input type="file" id="image" name="image" class="form-control mb-2">
+          <label class="fw-semibold mt-2">Image de l'épice</label>
+          <input type="file" id="image" name="image" class="form-control mb-2" accept="image/*">
+
+          <div class="text-center text-muted my-2">ou</div>
+
+          <input type="url" id="imageUrl" class="form-control mb-2" placeholder="Entrer l’URL de l’image (https://...)">
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary">Enregistrer</button>

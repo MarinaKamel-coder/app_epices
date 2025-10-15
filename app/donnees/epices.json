@@ -26,9 +26,9 @@
     "nom": "Piment de Cayenne",
     "type": "Épice",
     "origine": "Guyane",
-    "prix": "3.5",
+    "prix": "3.75",
     "vendeur": "Les Saveurs Exotiques",
-    "stock": "22",
+    "stock": "20",
     "image": "/images/epices/cayenne.webp",
     "description": "Épice très piquante, utilisée pour relever les plats, les sauces et les marinades."
   },
@@ -218,5 +218,27 @@
     "stock": 45,
     "image": "/images/epices/origan.webp",
     "description": "Herbe aromatique avec un goût piquant, utilisée dans la cuisine italienne, grecque et mexicaine."
+  },
+  {
+    "nom": "Zaatar ",
+    "type": "Épice",
+    "origine": "Méditerranée",
+    "prix": "3.80",
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": "3",
+    "description": "un mélange d'épices utilisé dans la cuisine du Moyen-Orient.Il possède une saveur unique, légèrement citronnée, herbacée et légèrement piquante, grâce aux différentes herbes et épices qui le composent.",
+    "id": "21",
+    "image": "/images/epices/zaatar.jpg"
+  },
+  {
+    "nom": "Curcuma",
+    "type": "Épice",
+    "origine": "Inde",
+    "prix": "2.75",
+    "vendeur": "Épices Traditionnelles",
+    "stock": "0",
+    "description": "Le curcuma combat l'excès de sébum : Grâce à ses propriétés anti-inflammatoires et antibactériennes, le curcuma aide à réguler la production de sébum, prévenant ainsi les éruptions cutanées. Une étude a montré que le curcuma peut réduire considérablement l’acné.",
+    "image": "/images/epices/curcuma.jpg",
+    "id": "22"
   }
 ]
