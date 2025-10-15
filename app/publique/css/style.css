@@ -1,3 +1,4 @@
+
 /* Styles par défaut */
 body {
   transition: background-color 0.3s, color 0.3s;
@@ -5,28 +6,80 @@ body {
   color: rgb(221, 39, 109);
 }
 
+.navbar {
+  min-width: 140px;
+  background: linear-gradient(
+    360deg,
+    rgba(57, 219, 117, 0.4),
+    rgba(13, 74, 36, 0.434)
+  );
+}
+/* === Style moderne pour le logo === */
+.logo-text {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(107, 42, 30);
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: default;
+}
+
+.logo-text:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.navbar-brand img {
+  width: 55px; 
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.4); 
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
 .card {
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
+  font-size: var(--price-badge-size);
+  --card-bg: #ffffff;
+  background-color: var(--card-bg);
+  font-size: var(--card-title-size);
+  line-height: 1.2;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+  color: #0b1220;
+  border: 1px solid rgba(18, 38, 63, 0.04);
+  box-shadow: 0 8px 20px rgba(18, 38, 63, 0.06);
 }
 .card-epice {
-  transition: transform .12s ease, box-shadow .12s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s;
   border: none;
+ 
   background: var(--card-bg);
+  
 }
 .card-epice:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 .card-epice img {
-  height: 200px;
+  height: 180px;
   object-fit: cover;
+   
 }
+
 .icon-small { font-size: 0.9rem; }
 .toast-body { font-size: 0.95rem; }
 
-.navbar .form-control-sm, .navbar .form-select-sm {
-  min-width: 140px;
-}
 /* --- Bandeau haut sur l’image --- */
 .overlay-top {
   position: absolute;
@@ -41,7 +94,18 @@ body {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
+/* Couleur du badge de prix */
+.badge-prix {
+    background: linear-gradient(
+    90deg,
+    rgba(37, 50, 235, 0.612),
+    rgba(198, 29, 29, 0.523)
+  ); 
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
 /* --- Bandeau bas (stock) --- */
 .overlay-bottom {
   background: rgba(0, 0, 0, 0.08);
@@ -111,20 +175,23 @@ body {
 /* ======================
    MODE SOMBRE
    ====================== */
-.dark-mode {
+.dark-mode  {
   background-color: #121212 !important;
   color: #a0c842 !important;
 }
 
 /* Navbar sombre */
 .dark-mode .navbar {
-  background-color: #606859b5 !important;
+  background: #606859b5 !important;
 }
 .dark-mode .navbar .navbar-brand,
 .dark-mode .navbar .form-control,
 .dark-mode .navbar .form-select,
 .dark-mode .navbar button {
   color: #f5f5f5 !important;
+}
+.dark-mode .logo-text {
+  color: rgb(212, 239, 224);
 }
 
 /* Cartes */
@@ -186,14 +253,19 @@ body {
   color: #f5f5f5;
   border: 1px solid #444;
 }
+.dark-mode .overlay-top {
+  background: rgba(50, 50, 50, 0.735);
+}
 .dark-mode .overlay-bottom {
   background: rgba(255, 255, 255, 0.08);
 }
 
 .dark-mode .badge.bg-light {
-  background-color: #2c2c2c !important;
+  background: #2c2c2c !important;
   color: #fff !important;
 }
-
+.dark-mode .badge-prix {
+  color: #ffffff;
+}
 
 

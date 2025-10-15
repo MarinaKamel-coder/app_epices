@@ -1,3 +1,5 @@
+
+
 import * as requetes from "../requetes/requetes_epices.js";
 
 const listeEpices = document.getElementById("listeEpices");
@@ -53,13 +55,13 @@ function afficher(data) {
     col.className = "col-md-4";
 
     col.innerHTML = `
-      <div class="card h-100 shadow-sm position-relative overflow-hidden">
+      <div class="card card-epice h-100 shadow-sm position-relative overflow-hidden">
         <div class="position-relative">
           <img src="${escapeHtml(e.image)}" class="card-img-top" style="height:220px;object-fit:cover;">
 
           <!-- Bandeau haut -->
           <div class="overlay-top d-flex justify-content-between align-items-center px-2">
-            <span class="badge bg-light text-dark fw-bold">${escapeHtml(e.prix)} $ CAD</span>
+            <span class="badge badge-prix fw-bold">${escapeHtml(e.prix)} $ CAD</span>
             <div class="d-flex gap-2">
               <button class="btn btn-sm btn-light btn-action btn-modifier" title="Modifier">
                 <i class="bi bi-pencil-square text-primary"></i>
@@ -251,19 +253,19 @@ function appliquerFiltresTri() {
   else if (tri === "prix-asc") resultat.sort((a, b) => Number(a.prix) - Number(b.prix));
   else if (tri === "prix-desc") resultat.sort((a, b) => Number(b.prix) - Number(a.prix));
   else if (tri === "stock-asc") {
-  resultat.sort((a, b) => {
-    if (a.stock === 0 && b.stock > 0) return -1;  
-    if (a.stock > 0 && b.stock === 0) return 1;   
-    return a.stock - b.stock;                      
-  });
-} else if (tri === "stock-desc") {
- 
-  resultat.sort((a, b) => {
-    if (a.stock === 0 && b.stock > 0) return 1;   
-    if (a.stock > 0 && b.stock === 0) return -1;  
-    return b.stock - a.stock;                      
-  });
-}
+    resultat.sort((a, b) => {
+      if (a.stock === 0 && b.stock > 0) return -1;  
+      if (a.stock > 0 && b.stock === 0) return 1;   
+      return a.stock - b.stock;                      
+    });
+  } else if (tri === "stock-desc") {
+    resultat.sort((a, b) => {
+      if (a.stock === 0 && b.stock > 0) return 1;   
+      if (a.stock > 0 && b.stock === 0) return -1;  
+      return b.stock - a.stock;                      
+    });
+  }
+
 
   // ----------------------
   // Affichage
