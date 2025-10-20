@@ -7,6 +7,10 @@ const formEpice = document.getElementById("formEpice");
 const modal = new bootstrap.Modal(document.getElementById("modalEpice"));
 const toastEl = document.getElementById("toast");
 const toast = new bootstrap.Toast(toastEl);
+const modalConfirm = new bootstrap.Modal(document.getElementById("modalConfirm"));
+const btnConfirmerSuppression = document.getElementById("btnConfirmerSuppression");
+const nomEpiceSupprimer = document.getElementById("nomEpiceSupprimer");
+let idASupprimer = null;
 
 let epices = [];
 
@@ -197,23 +201,14 @@ window.modifier = (id) => {
   modal.show();
 };
 
-window.supprimer = async (id) => {
-  try {
-    const res = await requetes.supprimer(id);
-    if (res.statut) {
-      toastEl.textContent = res.msg;
-      toast.show();
-      charger();
-    } else {
-      toastEl.textContent = res.msg || "Erreur suppression";
-      toast.show();
-    }
-  } catch (err) {
-    toastEl.textContent = "Erreur réseau ou serveur";
-    toast.show();
-    console.error(err);
-  }
+window.supprimer = (id) => {
+  const e = epices.find(x => String(x.id) === String(id));
+  if (!e) return;
+  idASupprimer = id;
+  nomEpiceSupprimer.textContent = e.nom;
+  modalConfirm.show();
 };
+
 
 // ==========================
 // Bouton Ajouter
@@ -287,6 +282,32 @@ function appliquerFiltresTri() {
 document.getElementById("recherche").oninput = appliquerFiltresTri;
 document.getElementById("filtre").onchange = appliquerFiltresTri;
 document.getElementById("tri").onchange = appliquerFiltresTri;
+
+
+// ==========================
+// Button de Suppression
+// ==========================
+
+  btnConfirmerSuppression.addEventListener("click", async () => {
+  if (!idASupprimer) return;
+  try {
+    const res = await requetes.supprimer(idASupprimer);
+    if (res.statut) {
+      toastEl.textContent = "🗑️ Épice supprimée avec succès.";
+      toast.show();
+      modalConfirm.hide();
+      idASupprimer = null;
+      setTimeout(() => charger(), 400);
+    } else {
+      toastEl.textContent = res.msg || "Erreur lors de la suppression.";
+      toast.show();
+    }
+  } catch (err) {
+    toastEl.textContent = "Erreur réseau ou serveur.";
+    toast.show();
+    console.error(err);
+  }
+});
 
 // ==========================
 // Mode clair / sombre

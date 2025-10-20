@@ -240,5 +240,17 @@
     "description": "Le curcuma combat l'excès de sébum : Grâce à ses propriétés anti-inflammatoires et antibactériennes, le curcuma aide à réguler la production de sébum, prévenant ainsi les éruptions cutanées. Une étude a montré que le curcuma peut réduire considérablement l’acné.",
     "image": "/images/epices/curcuma.jpg",
     "id": "22"
+  },
+  {
+    "nom": "Kamel",
+    "type": "Herbe",
+    "origine": "Méditerranée",
+    "prix": "10",
+    "vendeur": "Les Saveurs Exotiques",
+    "stock": "10",
+    "description": ";lm",
+    "imageUrl": "https://observatoire-des-aliments.fr/wp-content/uploads/2017/11/e%CC%81pices.jpg",
+    "image": "https://observatoire-des-aliments.fr/wp-content/uploads/2017/11/e%CC%81pices.jpg",
+    "id": "23"
   }
 ]

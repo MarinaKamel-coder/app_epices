@@ -102,7 +102,26 @@
   <div class="position-fixed bottom-0 end-0 p-3">
     <div id="toast" class="toast bg-success text-white" role="alert"></div>
   </div>
-
+  
+  <!-- Modal de confirmation de suppression -->
+<div class="modal fade" id="modalConfirm" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-danger shadow">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Confirmation de suppression</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="fw-semibold">Voulez-vous vraiment supprimer cette épice ?</p>
+        <p id="nomEpiceSupprimer" class="text-danger fw-bold fs-5"></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" id="btnConfirmerSuppression" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="utilitaires/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="js/global.js"></script>
 </body>

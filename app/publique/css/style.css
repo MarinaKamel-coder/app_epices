@@ -171,6 +171,13 @@ body {
   color: black ;
 
 }
+#modalConfirm .modal-content {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+#modalConfirm.show .modal-content {
+  transform: scale(1.02);
+}
 
 /* ======================
    MODE SOMBRE
